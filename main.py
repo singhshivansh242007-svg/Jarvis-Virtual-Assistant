@@ -9,14 +9,12 @@ r = sr.Recognizer()
 
 newsapi = "1e748ba3c9134d749cdf7e4ea560a619"
 weatherapi = "ef0bdbf93aa4c75c52c75b15ce18e8d7"
-
-engine = pyttsx3.init('sapi5')
-engine.setProperty('rate', 140)
-
-client = genai.Client(api_key="AQ.Ab8RN6KmAfEEpGy3AkrlcpC2hJBynkg6jpPuIWNCI3jqVlVbLw")  # move outside
+client = genai.Client(api_key="AQ.Ab8RN6KmAfEEpGy3AkrlcpC2hJBynkg6jpPuIWNCI3jqVlVbLw")  
 
 
 def speak(text):
+    engine = pyttsx3.init('sapi5')
+    engine.setProperty('rate', 140)
     engine.say(text)
     engine.runAndWait()
 
